@@ -38,6 +38,10 @@ namespace NVIDIA.Flex
         const string FLEXEXT_DLL = "NvFlexExtDebugCUDA_x64";
 #   else
         //const string FLEXEXT_DLL = "NvFlexExtReleaseCUDA_x64";
+        /*
+         * Name of the Linux flex library must start with lowercase.
+         * "flexUtils" means that the library file is called "libflexUtils.so"
+         */
         const string FLEXEXT_DLL = "flexUtils";
 #   endif
 #else
