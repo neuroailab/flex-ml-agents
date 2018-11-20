@@ -15,7 +15,7 @@ Copy the created libflexUtils.so into `UnitySDK/Assets/GameWorks/Flex/Engine/Nat
 
 Once this is done you can build a Linux binary of FleX ML Agents in the Unity Editor on a Windows machine. Therefore, open the **UnitySDK** project and select **File&rarr;Build Settings...**. Change the `Target Platform` to `Linux` and the `Architecture` to `x86_64`. Enable `Headless Mode` if your environment does not render out any images. Click on `Build` and select where you would like to store your binary. Press `Save` and you are done and your binary will have been build.
 
-Without `Headless Mode`, that means if you want to render images on a cluster without a display, you will need to have **X Server** running on your display-less cluster machine. To start up **X** execute the following commands:
+Without `Headless Mode`, that means if you want to render images on a cluster without a display, you will need to have **X Server** running on your cluster machine. To start up **X** execute the following commands:
 
 ```bash
 sudo service lightdm stop
