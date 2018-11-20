@@ -6,7 +6,7 @@ physics simulation engine, able to simulate various types of material such as
 rigid bodies, soft bodies, cloth, inflatables, fluids, and gases. This implementation
 uses the [NVidia FleX Unity plugin](https://assetstore.unity.com/packages/tools/physics/nvidia-flex-for-unity-1-0-beta-120425 "NVidia FleX plugin"). 
 
-Please visit [the official website](https://neuroailab.github.io/flex-ml-agents/ "FleX ML Agents Website") for a brief introduction into flex-ml-agents.
+Please visit [the official website](https://neuroailab.github.io/flex-ml-agents/ "FleX ML Agents Website") for a brief introduction into flex-ml-agents. The FleX ML Agents Simulation Environment is part of our code release for [Flexible Neural Representation for Physics Prediction](https://neuroailab.github.io/physics/ "Flexible Neural Representation for Physics Prediction").
 
 <img src="docs/images/unity-wide.png" align="middle" width="3000"/>
 
