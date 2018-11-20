@@ -679,6 +679,19 @@ namespace MLAgents
             info.vectorObservation.Add(observation);
         }
 
+		/// <summary>
+		/// Adds an Vector4 observation to the vector observations of the agent.
+		/// Increases the size of the agents vector observation by 4.
+		/// </summary>
+		/// <param name="observation">Observation.</param>
+		protected void AddVectorObs(Vector4 observation)
+		{
+			AddVectorObs(observation.x);
+			AddVectorObs(observation.y);
+			AddVectorObs(observation.z);
+			AddVectorObs(observation.w);
+		}
+
         /// <summary>
         /// Adds an Vector3 observation to the vector observations of the agent.
         /// Increases the size of the agents vector observation by 3.
@@ -751,6 +764,23 @@ namespace MLAgents
             oneHotVector[observation] = 1;
             info.vectorObservation.AddRange(oneHotVector);
         }
+
+		/// <summary>
+		/// Fills up oberservation vector with a specified dummy value. 
+		/// Throws exception if observation vector exceeds its specified size.
+		/// </summary>
+		public void FillUpOberservationVectorWithDummyValue(float dummyValue = 0.0f)
+		{
+			int numMissingObservations = brain.brainParameters.vectorObservationSize - info.vectorObservation.Count;
+
+			if(numMissingObservations < 0)
+				throw new UnityAgentsException(string.Format(
+					"Observation vector length ( {0} ) exceeds the specified observation size ( {1} )",
+					info.vectorObservation.Count, brain.brainParameters.vectorObservationSize));
+
+			float[] dummyValues = Enumerable.Repeat(dummyValue, numMissingObservations).ToArray();
+			info.vectorObservation.AddRange (dummyValues);
+		}
 
         /// <summary>
         /// Sets the text observation.
