@@ -1,4 +1,4 @@
-# FleX ML Agents Simulation Environment - ML Agents Fork with NVidia FleX support
+# FleX ML Agents Simulation Environment - Unity ML Agents Fork with NVidia FleX support
 
 <img src="docs/images/unity-wide.png" align="middle" width="3000"/>
 
