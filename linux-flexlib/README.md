@@ -24,7 +24,7 @@ sudo /usr/bin/X :0
 export DISPLAY=":0"
 ```
 
-You can control which GPU is used for rendering on **X** by setting `export~DISPLAY=":0.0"` for the first GPU, `exportDISPLAY=":0.1"` for the second GPU and so on. Use `export~CUDA_VISIBLE_DEVICES="0,1,2,3"` to control which GPUs are used for CUDA computations, that means FleX as well as Tensorflow or PyTorch.
+You can control which GPU is used for rendering on **X** by setting `export DISPLAY=":0.0"` for the first GPU, `export DISPLAY=":0.1"` for the second GPU and so on. Use `export CUDA_VISIBLE_DEVICES="0,1,2,3"` to control which GPUs are used for CUDA computations, that means FleX as well as Tensorflow or PyTorch.
 
 Once you have completed this setup, you can run flex-ml-agents on your Linux cluster, as you would normally do:
 ```bash
