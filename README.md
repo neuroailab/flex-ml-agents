@@ -1,5 +1,11 @@
 # FleX ML Agents Simulation Environment - Unity ML Agents Fork with NVidia FleX support
 
+This is a fork of Unity ML Agents extended to support 
+[NVidia FleX](https://developer.nvidia.com/flex "NVidia FleX"), a particle based 
+physics simulation engine, able to simulate various types of material such as 
+rigid bodies, soft bodies, cloth, inflatables, fluids, and gases. This implementation
+uses the [NVidia FleX Unity plugin](https://assetstore.unity.com/packages/tools/physics/nvidia-flex-for-unity-1-0-beta-120425 "NVidia FleX plugin").
+
 <img src="docs/images/unity-wide.png" align="middle" width="3000"/>
 
 <img src="docs/images/image-banner.png" align="middle" width="3000"/>
