@@ -446,10 +446,10 @@ namespace NVIDIA.Flex
         {
             if (sm_libraryRefCount++ == 0)
             {
-#if FLEX_CUDA
+#if FLEX_CUDA || UNITY_STANDALONE_LINUX
                 Flex.InitDesc desc = new Flex.InitDesc { computeType = Flex.ComputeType.CUDA, enableExtensions = false };
 #else
-                Flex.InitDesc desc = new Flex.InitDesc { computeType = Flex.ComputeType.D3D11, enableExtensions = false };
+                Flex.InitDesc desc = new Flex.InitDesc { computeType = Flex.ComputeType.D3D11, enableExtensions = false, deviceIndex = 0 };
 #endif
                 sm_libraryHandle = Flex.Init(Flex.FLEX_VERSION, ErrorCallback, ref desc);
             }

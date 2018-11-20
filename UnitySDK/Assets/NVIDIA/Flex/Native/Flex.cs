@@ -33,11 +33,12 @@ namespace NVIDIA.Flex
 {
     public static class Flex
     {
-#if FLEX_CUDA
+#if FLEX_CUDA || UNITY_STANDALONE_LINUX
 #   if FLEX_DEBUG
         const string FLEX_DLL = "NvFlexDebugCUDA_x64";
 #   else
-        const string FLEX_DLL = "NvFlexReleaseCUDA_x64";
+        //const string FLEX_DLL = "NvFlexReleaseCUDA_x64";
+        const string FLEX_DLL = "flexUtils";
 #   endif
 #else
 #   if FLEX_DEBUG

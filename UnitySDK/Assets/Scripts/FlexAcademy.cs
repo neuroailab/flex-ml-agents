@@ -51,6 +51,15 @@ public class FlexAcademy : Academy {
 	}
 
 	/// <summary>
+	/// Checks if application is runnning in headless mode.
+	/// </summary>
+	/// <returns><c>true</c>, if headless mode is used, <c>false</c> otherwise.</returns>
+	public static bool isHeadlessMode()
+	{
+		return SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null;
+	}
+
+	/// <summary>
 	/// Adds a flex solid actor to gameObject.
 	/// </summary>
 	/// <param name="gameObject">Input gameObject with mesh to which flex solid actor should be attached.</param>
@@ -65,7 +74,8 @@ public class FlexAcademy : Academy {
 		FlexSolidActor flexActor = gameObject.AddComponent<FlexSolidActor> ();
 		flexActor.asset = flexSolidAsset;
 		flexActor.container = this.flexContainer;
-		flexActor.drawParticles = true;
+		if(!isHeadlessMode())
+			flexActor.drawParticles = true;
 		flexActor.enabled = false;
 		flexActor.enabled = true;
 	}

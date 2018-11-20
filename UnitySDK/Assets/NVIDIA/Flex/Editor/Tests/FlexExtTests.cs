@@ -209,7 +209,7 @@ public class FlexExtTests
         {
             deviceIndex = -1,
             enableExtensions = false,
-#if FLEX_CUDA
+#if FLEX_CUDA || UNITY_STANDALONE_LINUX
             computeType = Flex.ComputeType.CUDA,
 #else
             computeType = Flex.ComputeType.D3D11,
