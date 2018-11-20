@@ -6,16 +6,6 @@ using NVIDIA.Flex;
 
 public class FlexAcademy : Academy {
 	/// <summary>
-	/// The number of steps in the current experiment.
-	/// </summary>
-	public int numSteps = 0;
-
-	/// <summary>
-	/// The maximum number of steps per experiment.
-	/// </summary>
-	public int maxStepsPerExperiment = 100;
-
-	/// <summary>
 	/// Maximum number of particles in scene.
 	/// </summary>
 	public int maxParticles = 16;
@@ -130,7 +120,6 @@ public class FlexAcademy : Academy {
 		InitializeTarget();
 		InitializeAgent();
 		SetObservationVectorSize();
-		numSteps = 0;
 	}
 
 	/// <summary>
@@ -141,6 +130,5 @@ public class FlexAcademy : Academy {
 		target.GetComponent<FlexActor>().Teleport
 		(new Vector3(NewRandomPosition(), 0.5f, NewRandomPosition()),
 			Quaternion.Euler(Vector3.zero));
-		numSteps = 0;
 	}
 }

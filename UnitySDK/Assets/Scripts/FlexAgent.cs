@@ -85,14 +85,11 @@ public class FlexAgent : Agent
 
 		// Agent or target fell off platform
 		if (this.transform.position.y < -1.0 || 
-			academy.target.transform.position.y < -1.0 ||
-			academy.numSteps >= academy.maxStepsPerExperiment)
+			academy.target.transform.position.y < -1.0)
 		{
 			AddReward(-1.0f);
 			Done();
 		}
-
-		academy.numSteps++;
 	}
 
 	/// <summary>

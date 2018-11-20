@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf19075977a67448bf9a7a8e84f8f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSteps: 0
+  maxSteps: 100
   trainingConfiguration:
     width: 80
     height: 80
@@ -588,6 +588,8 @@ MonoBehaviour:
     targetFrameRate: 60
   resetParameters:
     resetParameters: []
+  numSteps: 0
+  maxStepsPerExperiment: 100
   maxParticles: 16
   particleRadius: 0.5
   flexContainer: {fileID: 0}
