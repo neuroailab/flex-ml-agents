@@ -1,4 +1,4 @@
-# How to build a FleX ML Agents binary for Linux
+# How to build and run a FleX ML Agents binary for Linux
 
 ***Important: FleX only works with NVidia GPUs and CUDA 8.0***
 
